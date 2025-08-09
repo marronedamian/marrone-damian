@@ -1,0 +1,14 @@
+/* TEAM */
+Owner: Damian Marrone
+Role: Software Engineer & Product Engineer
+Site: https://damianmarrone.com
+Location: Argentina
+
+/* THANKS */
+Tools: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
+Hosting: Unraid
+
+/* SITE */
+Last update: 2025-08-09
+Standards: HTML5, CSS3, ESNext
+Components: App Router, SEO Metadata, Open Graph, JSON-LD

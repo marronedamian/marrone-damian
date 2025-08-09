@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /drafts
+
+Sitemap: https://damianmarrone.com/sitemap.xml
+Host: https://damianmarrone.com

@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  frontend:
+    image: marronedamian-fe:1
+    build: ./
+    container_name: marronedamian-fe
+    hostname: marronedamian-fe
+    restart: always
+    ports:
+      - '8085:8085'
+    env_file: .env

@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0B0B0C;
+  --card: rgba(255, 255, 255, 0.06);
+  --stroke: rgba(255, 255, 255, 0.1);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: white;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system;
+}
+
+.glass {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  backdrop-filter: blur(16px);
+}
+
+.neon {
+  text-shadow: 0 0 20px rgba(109, 83, 244, 0.6);
+}
+
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+}
+
+.radiant {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(1000px 600px at 20% -10%, rgba(109, 83, 244, 0.35), transparent 60%),
+    radial-gradient(800px 500px at 80% 110%, rgba(109, 83, 244, 0.25), transparent 60%);
+  opacity: .9;
+}
+
+
+
+
+@keyframes energy-pulse {
+  0% {
+    opacity: 0.2;
+    background-position: 0% 0%;
+  }
+
+  50% {
+    opacity: 0.6;
+    background-position: 0% 100%;
+  }
+
+  100% {
+    opacity: 0.2;
+    background-position: 0% 0%;
+  }
+}
+
+.animate-energy-pulse {
+  animation: energy-pulse 4s infinite ease-in-out;
+  background: linear-gradient(to bottom,
+      rgba(59, 130, 246, 0.1) 0%,
+      rgba(59, 130, 246, 0.4) 50%,
+      rgba(59, 130, 246, 0.1) 100%);
+  background-size: 100% 200%;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .backdrop-blur-lg {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .timeline-item {
+    padding-bottom: 1.5rem;
+  }
+
+  /* Better text wrapping */
+  .text-xs {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+}
